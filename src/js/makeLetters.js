@@ -7,7 +7,6 @@ function makeLetters(length) {
     let through = 5;
     for ( let i = 0; i < length; i++ ) {
         if(i === num){
-            console.log(num);
             result += " ";
             num = num + through;
         }
@@ -15,5 +14,4 @@ function makeLetters(length) {
     }
     return result;
 }
-
 export default makeLetters;

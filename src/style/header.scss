@@ -45,7 +45,6 @@ header{
       }
       .dropdown-toggle.btn{
         padding: 4px 8px 4px 8px;
-        background: $alice-blue;
         border-radius: 8px;
         border: none;
         font-family: 'Montserrat';
@@ -56,6 +55,10 @@ header{
         letter-spacing: -0.2px;
         color: $prussian-blue;
         opacity: 0.64;
+        background: none;
+        &:active{
+          opacity: 1;
+        }
         &::after{
           display: none;
         }
@@ -69,9 +72,6 @@ header{
         padding: 0px 2px;
         top: 36px;
         left: 0;
-        //&:last-child a{
-        //  padding-bottom: 0px;
-        //}
         .dropdown-item{
           font-family: 'Montserrat';
           font-style: normal;
@@ -81,16 +81,11 @@ header{
           color: $prussian-blue;
           opacity: 0.64;
           padding: 8px 13px;
-          //padding-bottom: 16px;
           &:hover{
             background: $alice-blue;
             border-radius: 8px;
           }
         }
-        //.dropdown-itemActive{
-        //  background: $alice-blue;
-        //  border-radius: 8px;
-        //}
       }
     }
     .btnsBlock{
