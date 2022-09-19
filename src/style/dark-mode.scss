@@ -1,0 +1,61 @@
+.dark-mode{
+    background: $prussian-blue;
+    header{
+      background: $prussian-blue;
+      .container{
+        .navbar-brand{
+          .bigLogoForLightTheme{
+            .svgBigEl{
+              fill: $white;
+            }
+          }
+          .miniLogoForLightTheme{
+            .svgMiniEl{
+              fill: $white;
+            }
+          }
+        }
+        .nav{
+          a{
+            color: $white;
+          }
+          .dropdown{
+            .btn{
+              background: rgba(255, 255, 255, 0.1);
+              color: $white;
+              svg{
+                fill: $white;
+              }
+            }
+            .dropdown-menu{
+              background: $prussian-blue;
+              border: 1px solid $heather;
+              .dropdown-item{
+                color: $white;
+                &:hover{
+                  background: rgba(255, 255, 255, 0.1);
+                  border-radius: 0px;
+                }
+              }
+            }
+          }
+        }
+        .btnsBlock{
+          .coverBtnApp{
+            .themeBtn{
+              .darkModeBtn{
+                display: none;
+              }
+              .lightModeBtn{
+                display: block;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  .coverTypeBlock .innerTypeBlock .typeBlock .letters{
+    color: $white;
+  }
+}

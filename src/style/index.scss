@@ -1,0 +1,272 @@
+@import 'global';
+@import 'fonts';
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body{
+  @import 'header';
+  background: $white;
+  @import 'coverTypeBlock';
+}
+@import "dark-mode";
+@import 'ModalMenu';
+.container{
+  padding: 0 53px;
+  @media only screen and (max-width: 768px){
+    padding: 0 21px;
+  }
+  @media only screen and (max-width: 360px){
+    padding: 0 17px;
+  }
+}
+.overHidden{
+  overflow: hidden;
+}
+
+
+
+
+
+
+//
+//#cssTest {
+//  animation: cssTestAn 1s linear infinite;
+//
+//  transform-origin: 50% 50% 0;
+//}
+//@keyframes cssTestAn {
+//  0%   { transform: rotate(0deg) translate(0px, 0px); }
+//  50%  { transform: rotate(-25deg) translate(10px, 0px); }
+//  100% { transform: rotate(0deg) translate(0px, 0px); }
+//}
+//
+//
+//#test {
+//  animation: path-change 1s linear infinite;
+//}
+//@keyframes path-change {
+//  0%   { d: var(--def-A); }
+//  50%  { d: var(--def-B); }
+//  100% { d: var(--def-A); }
+//}
+//
+//:root {
+//  --def-A: path("M169.422 65.6618L169.56 61.8693L92.0398 55.2354L105.498 125.374C139.607 126.451 168.176 99.7649 169.422 65.6618Z");
+// --def-B: path("M 152.0992424049175 107.40075759508248 L 152.0992424049175 106.90075759508248 L 92.0398 55.2354 L 105.498 125.374 C 141.3492424049175 124.65075759508248 135.0992424049175 127.40075759508248 152.0992424049175 107.40075759508248 Z");
+//
+//  --def-A-up: path("M77.1473 36.5969L77.1238 56.0906L169.135 56.0906C161.747 49.1863 143.157 41.5386 124.805 40.1393L77.1473 36.5969Z");
+//  --def-B-up: path("M 77.1473 36.5969 L 77.1238 56.0906 L 160.78148653110617 22.385500700266917 C 149.59954593746613 9.893604836130258 103.4730609441456 38.63404310518441 85.1210609441456 37.23474310518441 L 77.1473 36.5969 Z");
+//
+//  --beak_top-A: path("M77.1473 36.5969L77.1238 56.0906L169.135 56.0906C161.747 49.1863 143.157 41.5386 124.805 40.1393L77.1473 36.5969Z");
+//  --beak_top-B: path("M76.9943 41.3408L84.5894 59.294L169.286 23.3424C159.788 19.8737 139.687 20.0976 122.248 25.9803L76.9943 41.3408Z");
+//
+//  --beak_bottom-A: path("M169.422 65.6618L169.56 61.8693L92.0398 55.2354L105.498 125.374C139.607 126.451 168.176 99.7649 169.422 65.6618Z");
+//  --beak_bottom-B: path("M 152.0992424049175 107.40075759508248 L 152.0992424049175 106.90075759508248 L 92.0398 55.2354 L 105.498 125.374 C 141.3492424049175 124.65075759508248 135.0992424049175 127.40075759508248 152.0992424049175 107.40075759508248 Z");
+//
+//}
+//
+//.move{
+//  animation: moveAnimation 1.5s linear infinite;
+//}
+//@keyframes moveAnimation {
+//  0%   { transform: translate(0px, 0px); }
+//  25%  { transform: translate(0px, -3px); }
+//  50%  { transform: translate(0px, 0px); }
+//  75% { transform: translate(0px, 3px); }
+//  100% { transform: translate(0px, 0px); }
+//}
+//
+//.bite{
+//  #beak_top {
+//    animation: beak_top_animation 0.2s linear;
+//  }
+//  #beak_bottom {
+//    animation: beak_bottom_animation 0.2s linear;
+//  }
+//}
+//
+//@keyframes beak_top_animation {
+//  0%   { d: var(--beak_top-A); }
+//  50%  { d: var(--beak_top-B); }
+//  100% { d: var(--beak_top-A); }
+//}
+//
+//@keyframes beak_bottom_animation {
+//  0%   { d: var(--beak_bottom-A); }
+//  50%  { d: var(--beak_bottom-B); }
+//  100% { d: var(--beak_bottom-A); }
+//}
+//
+//.angry{
+//  #angry_eye, #beak_angry{
+//    display: block;
+//  }
+//  #beak_bottom{
+//    display: none;
+//  }
+//}
+//#angry_eye, #beak_angry{
+//  display: none;
+//}
+
+
+
+//.coverTypeBlock{
+//  display: flex;
+//  margin-top: 86px;
+//  .innerTypeBlock{
+//    position: relative;
+//    display: flex;
+//    //justify-content: flex-end;
+//    width: 100%;
+//    .typeBlock{
+//      outline: none;
+//      cursor: pointer;
+//      left: 0;
+//      display: flex;
+//      align-items: center;
+//      .bird{
+//        width: 175.81px;
+//        @media only screen and (max-width: 768px) {
+//          width: 96px;
+//        }
+//        @media only screen and (max-width: 360px) {
+//          width: 88px;
+//        }
+//      }
+//      .letters{
+//        white-space: pre;
+//        font-family: 'Montserrat', sans-serif;
+//        font-style: normal;
+//        font-weight: 700;
+//        font-size: 120px;
+//        line-height: 136px;
+//        color: $prussian-blue;
+//        padding-left: 32px;
+//        @media only screen and (max-width: 768px) {
+//          left:  96px;
+//          font-size: 96px;
+//          line-height: 112px;
+//          padding-left: 27px;
+//        }
+//        @media only screen and (max-width: 360px) {
+//          left:  88px;
+//          font-size: 48px;
+//          line-height: 59px;
+//        }
+//      }
+//    }
+//  }
+//  .specialWidth{
+//    .typeBlock{
+//      position: absolute;
+//      width: max-content;
+//    }
+//  }
+//}
+
+//#ModalMenu{
+//  .modal-content{
+//    background: $primary-deep-sky;
+//    .modal-header{
+//      border-bottom: none;
+//      padding: 24px 24px;
+//      .navbar-brand{
+//        .bigLogo{
+//          display: block;
+//        }
+//        .miniLogo{
+//          display: none;
+//        }
+//        @media only screen and (max-width: 500px) {
+//          .bigLogo{
+//            display: none;
+//          }
+//          .miniLogo{
+//            display: block;
+//          }
+//        }
+//      }
+//      .btnCloseModalMenu{
+//        background: none;
+//        padding: 0;
+//        border: none;
+//        margin-right: 22px;
+//        display: flex;
+//        @media only screen and (max-width: 500px){
+//          margin-right: -13px;
+//        }
+//        .burgerMenuClose{
+//          fill: $white;
+//        }
+//      }
+//    }
+//    .modal-body{
+//      padding: 0;
+//      margin-top: 40px;
+//      @media only screen and (max-width: 500px){
+//        margin-top: 10px;
+//      }
+//      .mobileMenu{
+//        margin: 0 0 0 44px;
+//        list-style-type: none;
+//        padding: 0;
+//        @media only screen and (max-width: 500px){
+//          margin: 0 0 0 25px;
+//        }
+//        li{
+//          &:nth-child(3){
+//            margin-bottom: 17px;
+//          }
+//          &:last-child > a{
+//            padding: 0 0 29px 0;
+//          }
+//          a{
+//            font-family: 'Montserrat';
+//            padding: 0 0 32px 0;
+//            font-style: normal;
+//            font-weight: 500;
+//            font-size: 16px;
+//            line-height: 24px;
+//            color: $white;
+//          }
+//          .special{
+//            border-bottom: solid 2px rgb(255 255 255 / 20%);
+//            padding: 15px 0;
+//            font-size: 24px;
+//            line-height: 32px;
+//          }
+//        }
+//      }
+//      .userBlock{
+//        margin-left: 44px;
+//        color: $white;
+//        @media only screen and (max-width: 500px){
+//          margin-left: 25px;
+//        }
+//        img{
+//          border-radius: 50%;
+//          margin-right: 16px;
+//        }
+//        .userData{
+//          .name{
+//            font-style: normal;
+//            font-weight: 500;
+//            font-size: 16px;
+//            line-height: 24px;
+//          }
+//          .coverCoins{
+//            .coinLogo{
+//              margin-right: 6px;
+//            }
+//            .coins{
+//              font-style: normal;
+//              font-weight: 500;
+//              font-size: 16px;
+//              line-height: 24px;
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}

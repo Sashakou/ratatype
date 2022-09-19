@@ -1,0 +1,16 @@
+$primary-deep-sky: #00ACFF;
+$secondary-electric-sky: #73EFFF;
+$tertiary-summer-sky: #39B5FA;
+$additional-sunglow: #FDCB35;
+$prussian-blue: #0A335C;
+$kashmir-blue: #53708D;
+$heather: #9FB8C6;
+$solitude: #E6EBEF;
+$alice-blue: #F3F5F7;
+$white: #FFFFFF;
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

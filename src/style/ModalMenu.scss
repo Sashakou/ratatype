@@ -1,0 +1,106 @@
+#ModalMenu{
+  .modal-content{
+    background: $primary-deep-sky;
+    .modal-header{
+      border-bottom: none;
+      padding: 24px 24px;
+      .navbar-brand{
+        .bigLogo{
+          display: block;
+        }
+        .miniLogo{
+          display: none;
+        }
+        @media only screen and (max-width: 500px) {
+          .bigLogo{
+            display: none;
+          }
+          .miniLogo{
+            display: block;
+          }
+        }
+      }
+      .btnCloseModalMenu{
+        background: none;
+        padding: 0;
+        border: none;
+        margin-right: 22px;
+        display: flex;
+        @media only screen and (max-width: 500px){
+          margin-right: -13px;
+        }
+        .burgerMenuClose{
+          fill: $white;
+        }
+      }
+    }
+    .modal-body{
+      padding: 0;
+      margin-top: 40px;
+      @media only screen and (max-width: 500px){
+        margin-top: 10px;
+      }
+      .mobileMenu{
+        margin: 0 0 0 44px;
+        list-style-type: none;
+        padding: 0;
+        @media only screen and (max-width: 500px){
+          margin: 0 0 0 25px;
+        }
+        li{
+          &:nth-child(3){
+            margin-bottom: 17px;
+          }
+          &:last-child > a{
+            padding: 0 0 29px 0;
+          }
+          a{
+            font-family: 'Montserrat';
+            padding: 0 0 32px 0;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: $white;
+          }
+          .special{
+            border-bottom: solid 2px rgb(255 255 255 / 20%);
+            padding: 15px 0;
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+      }
+      .userBlock{
+        margin-left: 44px;
+        color: $white;
+        @media only screen and (max-width: 500px){
+          margin-left: 25px;
+        }
+        img{
+          border-radius: 50%;
+          margin-right: 16px;
+        }
+        .userData{
+          .name{
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+          }
+          .coverCoins{
+            .coinLogo{
+              margin-right: 6px;
+            }
+            .coins{
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
