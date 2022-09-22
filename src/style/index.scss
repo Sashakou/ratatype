@@ -4,6 +4,7 @@
 
 body{
   font-family: 'Montserrat', sans-serif;
+  height: 100vh;
   @import 'header';
   background: $white;
   @import 'coverTypeBlock';
@@ -20,5 +21,8 @@ body{
   }
 }
 .overHidden{
-  overflow: hidden;
+  overflow-x: hidden;
+  body{
+    overflow-x: hidden;
+  }
 }

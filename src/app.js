@@ -13,7 +13,6 @@ let arr;
 const elCorrect = document.querySelector('.correct');
 const elTypos = document.querySelector('.typos');
 let bird = document.querySelector('.bird');
-let typeBlock = document.querySelector('.typeBlock');
 let letters = document.querySelector('.letters');
 
 const isKyr = str => /[а-я]/i.test(str);
@@ -60,41 +59,58 @@ document.querySelector('.burgerMenu ').addEventListener("click", (function (e) {
 document.querySelector('.btnCloseModalMenu ').addEventListener("click", (function (e) {
     ModalMenu.hide();
 }));
-
-typeBlock.addEventListener('keydown', function(event) {
+const birdAnim = [
+    { transform: 'translate(0px, 0px)' },
+    { transform: 'translate(30px, 0px)' },
+    { transform: 'translate(0px, 0px)' },
+];
+const timeAnim = {
+    duration: 400,
+    iterations: 1,
+    easing: 'ease-in-out'
+}
+const angry_eyeAnim = [
+    { visibility: ' visible' }
+];
+const angry_eyeTimeAnim = {
+    duration: 500,
+    iterations: 1,
+}
+const angry_eye = document.getElementById("angry_eye");
+const beak_angry = document.getElementById("beak_angry");
+document.querySelector(".textField").addEventListener('keyup', function(event) {
+    bird.classList.remove("move");
     if(isKyr(event.key)){
         ModalLang.show();
     }else{
-        bird.classList.remove("move");
         if(arr[0] !== event.key){
             typos++
-            bird.classList.add("angry");
+            angry_eye.animate(angry_eyeAnim, angry_eyeTimeAnim);
+            beak_angry.animate(angry_eyeAnim, angry_eyeTimeAnim);
+            bird.animate(birdAnim, timeAnim);
         }else if(arr[0] === event.key){
-            followWidth();
+            document.getElementById('anim_beak_top').beginElement();
+            document.getElementById('anim_beak_bottom').beginElement();
             correct++
-            bird.classList.add("bite");
             arr.shift();
             letters.innerHTML = arr.join('');
+            followWidth();
             if(arr.length === 0){
                 elCorrect.innerHTML = correct;
                 elTypos.innerHTML = typos;
                 exampleModal.show();
             }
         }
-
     }
-});
-typeBlock.addEventListener('keyup', function(event) {
+    this.value = "";
     bird.classList.add("move");
-    bird.classList.remove("bite");
-    bird.classList.remove("angry");
 });
-document.querySelector('.typeBlock').addEventListener("click", (function (e) {
-    bird.classList.add("move");
-}));
-document.querySelector('.typeBlock').addEventListener("blur", (function (e) {
-    console.log('blur');
+
+document.querySelector('.textField').addEventListener("blur", (function (e) {
     bird.classList.remove("move");
+}));
+document.querySelector(".textField").addEventListener("focus", (function (e) {
+    bird.classList.add("move");
 }));
 
 window.addEventListener('resize', () => {
@@ -105,8 +121,12 @@ window.addEventListener('resize', () => {
 });
 
 function ready() {
+    document.querySelector(".textField").focus();
     arr = makeLetters(numberOfLetters).split('');
     letters.innerHTML = arr.join('');
 }
 document.addEventListener("DOMContentLoaded", ready);
 window.onload = function() {followWidth();}
+
+
+

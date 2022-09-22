@@ -8,11 +8,44 @@
     width: 100%;
     justify-content: flex-end;
     .typeBlock{
-      outline: none;
-      cursor: pointer;
       left: 0;
       display: flex;
       align-items: center;
+      input{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: transparent;
+        border: none;
+        outline: none;
+        z-index: 9;
+        color: transparent;
+        caret-color: transparent;
+        text-shadow: 0 0 0 transparent;
+        &:focus{
+          caret-color: transparent!important;
+          text-shadow: 0 0 0 transparent!important;
+        }
+        &:active{
+          caret-color: transparent!important;
+          text-shadow: 0 0 0 transparent!important;
+        }
+        &:focus-within{
+          caret-color: transparent!important;
+          text-shadow: 0 0 0 transparent!important;
+        }
+        &:focus-visible{
+          caret-color: transparent!important;
+          text-shadow: 0 0 0 transparent!important;
+        }
+        &:target{
+          caret-color: transparent!important;
+          text-shadow: 0 0 0 transparent!important;
+        }
+      }
       .bird{
         width: 175.81px;
         @media only screen and (max-width: 768px) {
@@ -32,36 +65,8 @@
         75% { transform: translate(0px, 3px); }
         100% { transform: translate(0px, 0px); }
       }
-      .bite{
-        #beak_top {
-          animation: beak_top_animation 0.2s linear;
-        }
-        #beak_bottom {
-          animation: beak_bottom_animation 0.2s linear;
-        }
-      }
-
-      @keyframes beak_top_animation {
-        0%   { d: var(--beak_top-A); }
-        50%  { d: var(--beak_top-B); }
-        100% { d: var(--beak_top-A); }
-      }
-
-      @keyframes beak_bottom_animation {
-        0%   { d: var(--beak_bottom-A); }
-        50%  { d: var(--beak_bottom-B); }
-        100% { d: var(--beak_bottom-A); }
-      }
-      .angry{
-        #angry_eye, #beak_angry{
-          display: block;
-        }
-        #beak_bottom{
-          display: none;
-        }
-      }
       #angry_eye, #beak_angry{
-        display: none;
+        visibility:hidden;
       }
       .letters{
         white-space: pre;
